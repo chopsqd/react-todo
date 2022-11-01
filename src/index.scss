@@ -23,3 +23,41 @@ code {
     margin-right: 1rem;
   }
 }
+
+.alert-enter {
+  opacity: 0;
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transition: all 500ms ease-out;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transition: all 350ms ease-out;
+}
+
+.note-exit-active {
+  animation: note 500ms ease-out forwards;
+}
+
+.note-enter-active {
+  animation: note 500ms ease-in alternate-reverse;
+}
+
+@keyframes note {
+  0% {
+    transform: translateX(0);
+  }
+
+  30% {
+    opacity: .7;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
